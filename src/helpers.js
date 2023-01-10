@@ -11,3 +11,15 @@ export const NOD = (x, y) => {
   if (!y) return x;
   return NOD(y, x % y);
 };
+
+export const getProgression = () => {
+  const result = [];
+  const step = getRandomIntInclusive(1, 100);
+  let start = getRandomIntInclusive(1, 100);
+  const size = 10;
+  for (let i = 0; i < size; i += 1) {
+    result.push(start);
+    start += step;
+  }
+  return result;
+};
