@@ -5,3 +5,9 @@ export const getRandomIntInclusive = (min, max) => {
 };
 
 export const isEven = (num) => num % 2 === 0;
+
+export const NOD = (x, y) => {
+  if (y > x) return NOD(y, x);
+  if (!y) return x;
+  return NOD(y, x % y);
+};
