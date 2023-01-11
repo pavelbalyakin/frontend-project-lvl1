@@ -23,3 +23,13 @@ export const getProgression = () => {
   }
   return result;
 };
+
+export const isPrime = (num) => {
+  if (num < 2) return false;
+  let divider = num - 1;
+  while (divider > 1) {
+    if (num % divider === 0) return false;
+    divider -= 1;
+  }
+  return true;
+};
